@@ -1,0 +1,3 @@
+#20190420
+1.vector belongs to the header file <vector>,add item:vector.push_back(item)(add item to the vector end),get item:vector.at(index) or vector[index]
+2.INT_MAX (the variable represent the max int number),INT_MIN(the min int number), belongs to the header file <climits>
