@@ -10,6 +10,9 @@ using namespace std;
 
 class Solution {
 public:
+	/**
+	 * 我的解法
+	 */
 	int lengthOfLongestSubstring(string s) {
 		int count = 0, max = 0;
 		for (int p = 0; p < s.length(); p++) {
@@ -37,6 +40,22 @@ public:
 			}
 		}
 		return max;
+	}
+
+	/**
+	 * 博客园上的快速解法
+	 */
+	int lengthOfLongestSubstring2(string s){
+		int left = 0, res = 0, m[256] = {0};
+		for(int i=0;i<s.size();i++){
+			if(m[s[i]] == 0 || m[s[i]] < left){
+				res = max(res, i-left+1);
+			}else{
+				left = m[s[i]];
+			}
+			m[s[i]] = i + 1;
+		}
+		return res;
 	}
 };
 
