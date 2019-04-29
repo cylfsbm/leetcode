@@ -1,7 +1,7 @@
 /*
  * ReverseInteger.cpp
  *
- *  Created on: 2019年4月21日
+ *  Created on: 2019脛锚4脭脗21脠脮
  *      Author: Administrator
  */
 #include<iostream>
@@ -13,9 +13,9 @@ class Solution {
 public:
     int reverse(int x) {
     	long result = 0;
-    	int flag = 1;// 正数
+    	int flag = 1;// 姝ｆ暟
     	if(x < 0){
-    		flag = 0;// 负数
+    		flag = 0;// 璐熸暟
     	}
     	long lx = abs((long)x);
     	string x_str = to_string(lx);
