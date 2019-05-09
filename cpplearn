@@ -1,3 +1,21 @@
 #20190420
 1.vector belongs to the header file <vector>,add item:vector.push_back(item)(add item to the vector end),get item:vector.at(index) or vector[index]
 2.INT_MAX (the variable represent the max int number),INT_MIN(the min int number), belongs to the header file <climits>
+
+#20190509
+1.unordered_map 数据结构相当于Java中的HashMap
+2.插入数据 map['a'] = 1 | map.insert(make_pari('a',1))
+3.查找key值是否在map的key中 map.find("key") == map.end() 在unordered_map中，如果find()没找到要找的key，就返回和end()一样的iterator值 | map.count("key") == 0 count返回key在map中出现的次数
+4.移除元素
+iterator erase( const_iterator pos );
+iterator erase( const_iterator first, const_iterator last );
+size_type erase( const key_type& key );
+前两者使用迭代器指明移除范围，第三个移除特定key的键值对。
+示例代码:
+for(auto it = map.begin();it != map.end();){
+    if(it->first % 2 == 1){
+        it = map.erase(it);
+    }else{
+        it++;
+    }
+}
